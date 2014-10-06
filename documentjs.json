@@ -1,0 +1,9 @@
+{
+  "sites": {
+    "docs": {
+      "glob": "**/*.{js,md}",
+      "parent": "system-extension-stub",
+      "dest": "docs"
+    }
+  }
+}
