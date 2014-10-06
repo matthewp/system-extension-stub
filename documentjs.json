@@ -1,9 +1,6 @@
 {
-  "sites": {
-    "docs": {
-      "glob": "**/*.{js,md}",
-      "parent": "system-extension-stub",
-      "dest": "docs"
-    }
-  }
+  "versions": {
+    "0.0.1": "git://github.com/matthewp/system-extension-stub#master"
+  },
+  "defaultVersion": "0.0.1"
 }
