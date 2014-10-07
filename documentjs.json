@@ -1,7 +1,8 @@
 {
   "sites": {
     "docs": {
-      "glob": "**/*.{js,md}"
+      "glob": "doc/**/*.{js,md}",
+      "parent": "index"
     }
   }
 }
