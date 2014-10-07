@@ -17,7 +17,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<title>index  - index</title>
+	<title>system-extension-stub - system-extension-stub </title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	
@@ -33,7 +33,7 @@
 		<nav class="container">
 
 			<div class="logo-menu">
-				<a class="brand" href="./index.html">index</a>
+				<a class="brand" href="./index.html">system-extension-stub</a>
 			</div>
 
 			<div class="pull-right">
@@ -64,23 +64,11 @@
 		
 		
 			<li class="search-container active">
-			<a class="sidebar-title" href="index.html" data-search="index">
-				index
+			<a class="sidebar-title" href="index.html" data-search="system-extension-stub">
+				system-extension-stub
 			</a>
 			
 	<ul>
-		
-			
-				
-				
-				<li class="search-container">
-					<a class="page" href="README.html" data-search="README">
-						README
-					</a>
-				</li>
-				
-			
-			
 		
 			
 				
@@ -112,7 +100,7 @@
 		
 		<section class="title">
 			<div class="heading">
-<h1>index</h1>
+<h1>system-extension-stub</h1>
 	<ul class="tags">
 		<li>page</li>
 	</ul>
@@ -123,11 +111,17 @@
 <div class="sub-heading">
 	
 	
+		<span class="module">index</span>
+	
+	
+	
 	<span class="inherits">&nbsp;</span>
 </div>
 
 <ul class="links">
     
+	
+		<li><a href="">source</a></li>
 	
 	
 	
@@ -144,6 +138,11 @@
 		
 
 		
+		<section class="description">
+			<p>An easy interface to stubbing modules</p>
+
+		</section>
+		
 
 		
 			
@@ -154,7 +153,24 @@
 
 		
 		<section class="comment">
-			This is temporary content.  Create an index @page or specify <code>parent</code> in your siteConfig.
+			<h1>Usage</h1>
+<p>This SystemJS/StealJS extension provides a convenient way to stub any module in your project.
+A typical scenario might be that you want to stub a module for testing purposes.
+Consider the case where you are using a third-party library, <code>moment</code> in this case.
+To make your tests more predictable you might want to have moment always return the same date.
+You can easily achieve this using <code>system-extension-stub</code>:</p>
+<pre><code class="language-js">var stub = require('stub');
+var moment = require('moment');
+
+stub('moment', function() {
+  var date = new Date(2000, 1, 1);
+  return function() {
+    var inst = moment(date);
+    return inst;
+  };
+});
+</code></pre>
+
 		</section>
 		
 		
@@ -181,7 +197,7 @@
 	
 	
 	<script type="text/javascript">
-		var docObject = {"glob":{"pattern":"**/*.{js,md}","cwd":"/Users/matthew/Projects/system-extension-stub/system-extension-stub"},"forceBuild":true,"dest":"/Users/matthew/Projects/system-extension-stub/docs","generators":["html"],"parent":"index","docConfigDest":"../documentjs.json","project":{"version":"0.0.2","name":"system-extension-stub"},"name":"index","type":"page","children":[{"type":"page","name":"README","description":"<p>See documentation <a href=\"http://code.matthewphillips.info/system-extension-stub/\">here</a>.</p>\n","src":"README.md","parent":"index"},{"type":"module","name":"stub","description":"<p>Stub a module name by providing a factory function.</p>\n","title":"stub","parent":"index","signatures":[{"code":"stub(moduleName, factory)","description":"","params":[{"types":[{"type":"String"}],"name":"moduleName","description":"<p>The module to stub.</p>\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"name":"factory","description":"<p>A factory function that will return the module's stubbed value.</p>\n"}]}],"src":"doc/stub.md"}]};
+		var docObject = {"glob":{"pattern":"doc/**/*.{js,md}","cwd":"/Users/matthew/Projects/system-extension-stub/system-extension-stub"},"parent":"index","forceBuild":true,"dest":"/Users/matthew/Projects/system-extension-stub/docs","generators":["html"],"docConfigDest":"../documentjs.json","project":{"version":"0.0.2","name":"system-extension-stub"},"type":"page","name":"index","description":"<p>An easy interface to stubbing modules</p>\n","title":"system-extension-stub","comment":" ","src":"doc/index.md","children":[{"type":"module","name":"stub","description":"<p>Stub a module name by providing a factory function.</p>\n","title":"stub","parent":"index","signatures":[{"code":"stub(moduleName, factory)","description":"","params":[{"types":[{"type":"String"}],"name":"moduleName","description":"<p>The module to stub.</p>\n"},{"types":[{"type":"function","returns":{"types":[{"type":"undefined"}]},"params":[]}],"name":"factory","description":"<p>A factory function that will return the module's stubbed value.</p>\n"}]}],"src":"doc/stub.md"}]};
 	</script>
 	
 	
