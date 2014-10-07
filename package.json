@@ -1,6 +1,6 @@
 {
   "name": "system-extension-stub",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SystemJS extension for stubbing modules",
   "main": "stub.js",
   "directories": {
