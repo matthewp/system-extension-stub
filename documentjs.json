@@ -1,6 +1,6 @@
 {
   "versions": {
-    "0.0.2": "git://github.com/matthewp/system-extension-stub#master"
+    "0.0.3": "git://github.com/matthewp/system-extension-stub#0.0.3"
   },
-  "defaultVersion": "0.0.2"
+  "defaultVersion": "0.0.3"
 }
